@@ -71,7 +71,7 @@ stages:
     pool:
       vmImage: 'Ubuntu-16.04'
     environment: dev
-    variables: 
+    variables:
     - group: Release
     strategy:
       runOnce:
@@ -82,6 +82,6 @@ stages:
           - task: AzureWebApp@1
             displayName: 'Azure App Service Deploy: website'
             inputs:
-              azureSubscription: 'Resource Manager - Tailspin - Space Game'
+              azureSubscription: 'TailspinConnect'
               appName: '$(WebAppName)'
               package: '$(Pipeline.Workspace)/drop/$(buildConfiguration)/*.zip'
