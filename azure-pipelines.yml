@@ -1,5 +1,6 @@
 variables:
   buildConfiguration: 'Release'
+  releaseBranchName: 'release'
 
 stages:
 - stage: 'Build'
